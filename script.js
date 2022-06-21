@@ -24,19 +24,27 @@ const underAge = ticketPrice * 0.20
 const overAge = ticketPrice * 0.40
 
 
-let messaggio
+let finalPrice
 
-if (age < 18) { messaggio = ('il prezzo del suo biglietto è ' + ticketPrice * 0.20)
-
+if (age < 18) {
+    finalPrice =
+        (ticketPrice - underAge)
 }
 
 
-else if (age > 65) {messaggio = ('il prezzo del suo biglietto è ' + ticketPrice * 0.40)}
 
-else {messaggio = ('il prezzo del suo biglietto è  ' + ticketPrice)}
+else if (age > 65) {
+    finalPrice =
+        (ticketPrice - overAge)
+}
+
+else { finalPrice = (ticketPrice) }
 
 
-document.getElementById("prezzo").innerHTML = messaggio
+
+
+
+document.getElementById("prezzo").innerText ="il prezzo del tuo biglietto è " + finalPrice
 
 
 
