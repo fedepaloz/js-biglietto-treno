@@ -17,19 +17,26 @@ const ticketPrice = distance * 0.21
 
 console.log(ticketPrice)
 
+/* non so se aveva senso fare le due const qua sotto che non ho usato perche ho fatto direttamente il calcolo */
+
 const underAge = ticketPrice * 0.20
 
 const overAge = ticketPrice * 0.40
 
 
+let messaggio
 
-if (age < 18) { console.log('il prezzo del suo biglietto è ' + ticketPrice * 0.20)
-    
+if (age < 18) { messaggio = ('il prezzo del suo biglietto è ' + ticketPrice * 0.20)
+
 }
 
-else if (age > 65) {console.log('il prezzo del suo biglietto è ' + ticketPrice * 0.40)}
 
-else {console.log('il prezzo del suo biglietto è  ' + ticketPrice)}
+else if (age > 65) {messaggio = ('il prezzo del suo biglietto è ' + ticketPrice * 0.40)}
+
+else {messaggio = ('il prezzo del suo biglietto è  ' + ticketPrice)}
+
+
+document.getElementById("prezzo").innerHTML = messaggio
 
 
 
