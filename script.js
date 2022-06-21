@@ -5,15 +5,37 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va stampato in pagina forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca. */
 
-const distance = prompt("Quanti chilometri dovrai percorrere?")
+const distance = parseInt(prompt("Quanti chilometri dovrai percorrere?"))
 
 console.log(distance)
 
-const age = prompt ('quanti anni hai?')
+const age = parseInt(prompt('quanti anni hai?'))
 
 console.log(age)
 
-const ticketPrice = distance * 21
+const ticketPrice = distance * 0.21
 
 console.log(ticketPrice)
+
+const underAge = ticketPrice * 0.20
+
+const overAge = ticketPrice * 0.40
+
+
+
+if (age < 18) { console.log('il prezzo del suo biglietto è ' + ticketPrice * 0.20)
+    
+}
+
+else if (age > 65) {console.log('il prezzo del suo biglietto è ' + ticketPrice * 0.40)}
+
+else {console.log('il prezzo del suo biglietto è  ' + ticketPrice)}
+
+
+
+
+
+
+
+
 
